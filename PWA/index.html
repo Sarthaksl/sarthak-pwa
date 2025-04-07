@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy PWA</title>
+    <meta name="description" content="Shop the latest products with our easy to use online store">
+    <meta name="theme-color" content="#4285f4">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" href="https://cdn.pixabay.com/photo/2016/09/14/20/50/shopping-1670703_960_720.png">
+    <link rel="icon" type="image/png"
+        href="https://cdn.pixabay.com/photo/2016/09/14/20/50/shopping-1670703_960_720.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">ShopEasy</div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="cart">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Shop Smart, Shop Easy</h1>
+                <p>Discover amazing products at incredible prices</p>
+                <button class="cta-button">Shop Now</button>
+                <div id="install-banner" class="install-banner hidden">
+                    <p>Add ShopEasy to your home screen!</p>
+                    <button id="install-button">Install</button>
+                    <button id="dismiss-button">Dismiss</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <!-- For product1.jpg (Wireless Headphones) -->
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Wireless Headphones">
+                    <h3>Wireless Headphones</h3>
+                    <p class="price">$79.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <!-- For product2.jpg (Smartphone Case) -->
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Smartphone Case">
+                    <h3>Smartphone Case</h3>
+                    <p class="price">$24.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <!-- For product3.jpg (Smart Watch) -->
+                    <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Smart Watch">
+                    <h3>Smart Watch</h3>
+                    <p class="price">$149.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <!-- For product4.jpg (Bluetooth Speaker) -->
+                    <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Bluetooth Speaker">
+                    <h3>Bluetooth Speaker</h3>
+                    <p class="price">$59.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShopEasy</h3>
+                <p>Your one-stop shop for all your needs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@shopeasy.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 ShopEasy. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js')
+                .then(registration => console.log('ServiceWorker registered'))
+                .catch(err => console.log('ServiceWorker registration failed: ', err));
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
